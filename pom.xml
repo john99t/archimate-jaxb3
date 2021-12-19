@@ -36,6 +36,14 @@
             <version>3.0.2</version>
         </dependency>
 
+        <!-- JUnit 5 -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.8.1</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <!-- Invoke tooling API (Java 11) -->
@@ -55,7 +63,7 @@
                 <configuration>
                     <schemaDirectory>src/main/xsd</schemaDirectory>
                     <generateDirectory>${project.basedir}/src-generated/main/java</generateDirectory>
-                    <generatePackage>org.archimate31</generatePackage>
+                    <generatePackage>org.opengroup.archimate31</generatePackage>
                 </configuration>
             </plugin>
 

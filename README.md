@@ -6,6 +6,9 @@ Uses the [Eclipse reference implementation of JAXB v3](https://eclipse-ee4j.gith
 
 [ArchiMate Cookbook](http://www.hosiaisluoma.fi/ArchiMate-Cookbook.pdf)
 
+To generate Java classes into /src-generated:
 ```bash
 mvn jaxb30:generate
 ```
+
+Old ArchiMate models `ArchiMetal` and `Archinsurance` in [Archi model repo](https://github.com/archimatetool/ArchiModels)
