@@ -11,4 +11,7 @@ To generate Java classes into /src-generated:
 mvn jaxb30:generate
 ```
 
+TTD:
+- Generated sources should go straight into /target/generated-sources
+
 Old ArchiMate models `ArchiMetal` and `Archinsurance` in [Archi model repo](https://github.com/archimatetool/ArchiModels)

@@ -9,22 +9,24 @@ import org.opengroup.archimate31.ModelType;
 import java.io.File;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class UnMarshallTest {
 
+    public static final String ARCHIMATE_JAXB_PACKAGE = "org.opengroup.archimate31";
+
     @Test
     public void unmarshalModelMetadata() throws JAXBException, URISyntaxException {
-        var context = JAXBContext.newInstance("org.opengroup.archimate31");
+        var context = JAXBContext.newInstance(ARCHIMATE_JAXB_PACKAGE);
         var element = (JAXBElement) context.createUnmarshaller().unmarshal(getFileFromResource("Basic_Model.xml"));
         assertEquals(ModelType.class, element.getDeclaredType());
 
         var model = (ModelType)element.getValue();
         assertEquals("Example of a basic model with two elements and a relationship", model.getDocumentation().get(0).getValue());
         assertNull(model.getViews());
-        //assertTrue(model.getRelationships().getRelationship().size());
+        assertEquals(2, model.getElements().getElement().size());
+        assertEquals(1, model.getRelationships().getRelationship().size());
     }
 
     private File getFileFromResource(String fileName) throws URISyntaxException {
