@@ -2,6 +2,8 @@
 
 GitHub Repo: [archimate-jaxb3](https://github.com/john99t/archimate-jaxb3)
 
+[OpenGroup Model Exchange Format (MEF)](https://www.opengroup.org/open-group-archimate-model-exchange-file-format)
+
 Uses the [Eclipse reference implementation of JAXB v3](https://eclipse-ee4j.github.io/jaxb-ri)
 
 [ArchiMate Cookbook](http://www.hosiaisluoma.fi/ArchiMate-Cookbook.pdf)
